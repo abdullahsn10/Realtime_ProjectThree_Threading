@@ -1,0 +1,65 @@
+Description of the approach used to solve the project:
+---------------------------------------
+GOAL:
+    -inspection employees: are responsible to first make sure
+                            the medicine has been produced against the proper standard
+    -packaging employees: are responsible to place the medicine in packages and then place 
+                        the drug prescription in the same package
+---------------------------------------
+WORK:
+    NUMBER_OF_DIFFERENT_MEDICINES
+    NUMBER_OF_PRODUCTION_LINES
+    -------
+    Liquid Production Lines, Pill-Based Production Lines
+    -------
+
+---------------------------------------
+LIQUID LINES:
+    Inspection:
+        – Liquid level inside bottles is within the normal range,
+        – Liquid color matches expected color,
+        – Medicine bottles are properly sealed,
+        – Correct label is properly placed on the bottle,
+        – Medicine expiry date is clearly printed on the bottle and is correct.
+    Packaging:
+        - place the bottles in bottles containers and add folded prescription to each package
+
+----------------------------------------
+PILL BASED LINES:
+    Inspection:
+    – No plastic container is missing any pill,
+    – Pills in the plastic containers have the correct color and size,
+    – Medicine expiry date is clearly printed on the plastic container back.
+
+    Packaging:
+    - put the right number of plastic containers in the packages in addition to folded
+      prescription
+----------------------------------------
+medicine production lines don't all speed at the same speed.
+when need arises, employess from a production line goes to another production line to help
+----------------------------------------
+The simulation ends if:
+
+    – The pharmaceutical factory has produced a medicine type above a user-defined
+    threshold.
+    – Too many bottled medicine are out of spec.
+    – Too many pill-based medicine are out of spec.
+    – The simulation has been running for more than a user-defined amount of time
+    (in minutes).
+---------------------------------------
+USER-DEFINED:
+    NUMBER_OF_DIFFERENT_MEDICINES
+    NUMBER_OF_PRODUCTION_LINES
+    THRESHOLD_OF_NEEDED_LIQUID_MEDICINES
+    THRESHOLD_OF_NEEDED_PILL_MEDICINES
+    THRESHOLD_OF_DEFECTIVE_LIQUIDS
+    THRESHOLD_OF_DEFECTIVE_PILLS
+    SIMULATION_TIME
+    MIN_LIQUID_LEVEl
+    MAX_LIQUID_LEVEL
+    NUMBER_OF_PILLS_ON_PLASTIC_CONTAINER
+
+--------------------------------------
+The production lines are processes and the
+inspection & packaging employees are threads that belong to a particular production
+line.
